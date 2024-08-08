@@ -15,6 +15,7 @@ OUTPUT_FILE = WDIR / 'usegalaxy.org.au.yml'
 
 
 def parse():
+    """Parse tools list from YAML files."""
     data = {'tools': []}
     for f in WDIR.glob('*.yml.lock'):
         if not f.name.endswith('.yml.lock'):
@@ -35,12 +36,14 @@ def parse():
 
 
 def _transcribe_to_au(tool):
+    """Convert keys to AU installation format."""
     tool['tool_panel_section_label'] = 'Single-Cell'
     tool.pop('tool_panel_section_id')
     return tool
 
 
 def write_data(data):
+    """Write data to YAML output file."""
     with open(OUTPUT_FILE, 'w') as handle:
         yaml.dump(data, handle, default_flow_style=False)
 
