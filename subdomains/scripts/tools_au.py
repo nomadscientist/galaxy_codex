@@ -1,6 +1,16 @@
 """Convert YAML files for install on AU.
 
-Assumes that wdir contains tool yaml files.
+Assumes that wdir contains tool yaml files produced by the
+parse_tools_to_produce_yml_files.py script, they should look like:
+
+<tool_section_1>.yml
+<tool_section_1>.yml.lock
+<tool_section_2>.yml
+<tool_section_2>.yml.lock
+...
+
+See subdomains/singlecell/tool_panel for example.
+
 """
 
 import yaml
