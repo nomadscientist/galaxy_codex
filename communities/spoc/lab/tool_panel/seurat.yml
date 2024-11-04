@@ -1,4 +1,4 @@
-tool_panel_section_label: Seurat
+tool_panel_section_label: HCA-Seurat
 tools:
 - name: seurat_create_seurat_object
   owner: ebi-gxa
